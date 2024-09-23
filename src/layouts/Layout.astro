@@ -28,6 +28,7 @@ const { title } = Astro.props;
 						<li> <a href="#">Acerca de</a></li>
 						<li> <a href="#">Soporte</a></li>
 					</menu>
+					
 				</div>
 
 				<div class="menu-right">
@@ -40,11 +41,15 @@ const { title } = Astro.props;
 					<a href="#"> iniciar sesion </a>
 					              |
 					<a href="#"> idioma </a>
-					
 					  
 				</div>
 			</div>
 		 </header>
+
+		 <div class="banner"></div>
+		 <div class="left-menu"></div>
+		 <div class="banner2 container"></div>
+		 <div class="banner3"></div>
 	</body>
 </html>
 <style>
@@ -66,9 +71,10 @@ const { title } = Astro.props;
 		height: 80px;
 		width: 60%;
 		align-items: center;
-		float: left;    /*Permite que un elemento de bloque tenga algo a su lado*/
+		float: left;         /*Permite que un elemento de bloque tenga algo a su lado*/
         font-family: sans-serif;
-		text-transform: uppercase; /*El texto en mayuscula*/ 
+		text-transform: uppercase;   /*El texto en mayuscula*/ 
+		color: #f8eeee;
 	}
 	.flex-menu img{
 		width: 160px;
@@ -76,13 +82,14 @@ const { title } = Astro.props;
 
 	.flex-menu li {
 		margin-left: 10px;
-		display: inline;
+		display: inline-block;
 		color: #f1ecec;
 	}
 
 	.flex-menu a {
 		text-decoration: none;
-		color: #f1ecec;
+		color: #e6d7d7;
+		font-weight: 600;   /*Le da espesor a la letra*/ 
 	}
 
 	.flex-menu a:hover {
@@ -91,35 +98,57 @@ const { title } = Astro.props;
 	}
 	
 	.menu-right{
+		float: left;  /* Lo utiliza para acomodar el imiciar sesion a la derecha por espacio */
 		width: 40%;
+		margin-top: 8px;
+		font-family: sans-serif;
 		color: #f1ecec;
-		float: left;
-		
+	}
+	.menu-right a {
+		text-decoration: none;
+		color: #f1ecec;
+		font-size: 11.5px;
+
 	}
 	.btn-download{
 		text-decoration: none;
-		color: #f1ecec;
 		background: #789806;
-		padding: 6px 12px;
-		font-family:sans-serif;
+		padding: 5px 10px;
 		margin-top: 10px ;
-		gap: 8px;
+		margin-right: 10px;
+		gap: 7px;
 		display: inline-flex;
-		font-size: 11px;
-		align-items: center;
+		align-items: center;   /*Alinear items en el eje y */
 	}
 	.btn-download svg{
 		width: 15px;
 	}
 	.btn-download:hover{
-		background-color: green;
+		background-color:  #a2cc09d8;
 	}
-	.menu-right a {
-		text-decoration: none;
-		color: #f1ecec;
-		font-family: sans-serif;
-		margin-left: ;
-
+	.banner{
+		background: orange;
+		height: 478px;
+	}
+	.banner2{
+		position: relative;
+		background: purple;
+		height: 240px;
+		
+	}
+	.left-menu{
+		float: left;
+		background: pink;
+		width: 180px;
+		height: 360px;
+		z-index: 1;    /* Pra vizeualiza el elemento superpuesto y como se vera con otros */
+		position: sticky;   /* Se encarga que en caulquier momento se va a mostrar el elemento cuando bajemos */
+	    top: 0;        /* Para que se quede arriba del todo */
+		left: calc(((100% - 1200px) / 2) - 180px) ;
+	}
+	.banner3{
+		background: turquoise;
+		height: 120px;
 	}
 
 
