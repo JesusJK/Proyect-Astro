@@ -1,0 +1,126 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- <slot /> -->
+		 <header>
+			<div class="container">
+				<div class="flex-menu">
+					<img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="" class="">
+					<menu>
+						<li> <a href="#">Tienda</a></li>
+						<li> <a href="#">Comunidad</a></li>
+						<li> <a href="#">Acerca de</a></li>
+						<li> <a href="#">Soporte</a></li>
+					</menu>
+				</div>
+
+				<div class="menu-right">
+					<a href="#" class="btn-download">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+						  </svg>
+						  Instalar Steam
+					</a>
+					<a href="#"> iniciar sesion </a>
+					              |
+					<a href="#"> idioma </a>
+					
+					  
+				</div>
+			</div>
+		 </header>
+	</body>
+</html>
+<style>
+	html, body {
+		padding: 0;
+		margin: 0;
+	}
+	header{
+		background: #161d24;
+		height: 80px;
+	}
+	.container{
+		max-width: 1200px;
+		margin: 0 10%;
+		
+	}
+	.flex-menu{
+		display: flex;
+		height: 80px;
+		width: 60%;
+		align-items: center;
+		float: left;    /*Permite que un elemento de bloque tenga algo a su lado*/
+        font-family: sans-serif;
+		text-transform: uppercase; /*El texto en mayuscula*/ 
+	}
+	.flex-menu img{
+		width: 160px;
+	}
+
+	.flex-menu li {
+		margin-left: 10px;
+		display: inline;
+		color: #f1ecec;
+	}
+
+	.flex-menu a {
+		text-decoration: none;
+		color: #f1ecec;
+	}
+
+	.flex-menu a:hover {
+		color: #1a93eb;
+		text-decoration: underline;
+	}
+	
+	.menu-right{
+		width: 40%;
+		color: #f1ecec;
+		float: left;
+		
+	}
+	.btn-download{
+		text-decoration: none;
+		color: #f1ecec;
+		background: #789806;
+		padding: 6px 12px;
+		font-family:sans-serif;
+		margin-top: 10px ;
+		gap: 8px;
+		display: inline-flex;
+		font-size: 11px;
+		align-items: center;
+	}
+	.btn-download svg{
+		width: 15px;
+	}
+	.btn-download:hover{
+		background-color: green;
+	}
+	.menu-right a {
+		text-decoration: none;
+		color: #f1ecec;
+		font-family: sans-serif;
+		margin-left: ;
+
+	}
+
+
+</style>
