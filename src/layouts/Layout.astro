@@ -19,24 +19,50 @@ const { title } = Astro.props;
   <body>
     <!-- <slot /> -->
     <header class="bg-[#161d24] h-[104px] px-4">
-      <div class="container w-[940px] h-[104px] mx-10">
-
-        <div class="flex-menu absolute left-[200px] pt-[30px] flex h-[80px] w-[60%] items-center float-left font-sans uppercase text-gray-300">
+      <div class="container w-[940px] mx-10">
+        <div
+          class="flex-menu gap-1 absolute left-[200px] pt-[30px] flex h-[80px] w-[60%] items-center float-left font-sans uppercase text-gray-300"
+        >
           <img
             src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
             alt=""
             class="w-[176px] h-[44px]"
           />
           <menu>
-            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Tienda</a></li>
-            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Comunidad</a></li>
-            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Acerca de</a></li>
-            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Soporte</a></li>
+            <li class="ml-[10px] inline-block">
+              <a
+                href="#"
+                class="font-semibold hover:text-[#1a93eb] hover:underline"
+                >Tienda</a>
+            </li>
+            <li class="ml-[10px] inline-block">
+              <a
+                href="#"
+                class="font-semibold hover:text-[#1a93eb] hover:underline"
+                >Comunidad</a>
+            </li>
+            <li class="ml-[10px] inline-block">
+              <a
+                href="#"
+                class="font-semibold hover:text-[#1a93eb] hover:underline"
+                >Acerca de</a>
+            </li>
+            <li class="ml-[10px] inline-block">
+              <a
+                href="#"
+                class="font-semibold hover:text-[#1a93eb] hover:underline"
+                >Soporte</a>
+            </li>
           </menu>
         </div>
 
-        <div class="menu-right absolute right-[30px] mt-2 float-right w-[30%] font-sans text-[#f1ecec] items-center inline-flex gap-1 ">
-          <a href="#" class="btn-download bg-[#789806] gap-[7px] inline-flex items-center pl-[3px] pr-[5px] py-1 mr-[10px] text-xs hover:bg-[#a2cc09d8]">
+        <div
+          class="menu-right absolute right-[30px] mt-2 float-right w-[30%] font-sans text-[#f1ecec] items-center inline-flex gap-1"
+        >
+          <a
+            href="#"
+            class="btn-download bg-[#789806] gap-[7px] inline-flex items-center pl-[3px] pr-[5px] py-1 mr-[10px] text-xs hover:bg-[#a2cc09d8]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -60,14 +86,82 @@ const { title } = Astro.props;
       </div>
     </header>
 
-    <div class="banner bg-orange-400 h-[450px]"></div>
-    <div class="left-menu float-left z-[1] sticky top-0 left-[calc(((100%-1200px)/2)-180px)] bg-pink-300 h-[360px] w-[180px]"></div>
+    <div
+      class="banner h-[450px]"
+      style="background-image: url('/src/img/Imagen\ Portada.jpg');"
+    >
+      <div
+        class="barrita w-[940px] bg-[#2e609b]/80 h-[35px] absolute right-[7%] mt-8 inline-flex items-center gap-4"
+      >
+        <a
+          href="#"
+          class="text-[#e4e4e4] w-max p-1 ml-3 flex justify-center font-sans text-sm font-medium"
+          >Tu tienda</a
+        >
+        <a
+          href="#"
+          class="text-[#e4e4e4] w-max p-1 flex justify-center font-sans text-sm font-medium"
+          >Nuevo y destacable</a
+        >
+        <a
+          href="#"
+          class="text-[#e4e4e4] w-max p-1 flex justify-center font-sans text-sm font-medium"
+          >Categorias</a
+        >
+        <a
+          href="#"
+          class="text-[#e4e4e4] w-max p-1 flex justify-center font-sans text-sm font-medium"
+          >Tienda de Puntos</a
+        >
+        <a
+          href="#"
+          class="text-[#e4e4e4] w-max p-1 flex justify-center font-sans text-sm font-medium"
+          >Noticias</a
+        >
+        <a
+          href="#"
+          class="text-[#e4e4e4] w-max p-1 flex justify-center font-sans text-sm font-medium"
+          >Laboratorios</a
+        >
+        <div class="relative left-[70px]">
+          <input
+            type="search"
+            placeholder="buscar"
+            class="bg-[#316282] placeholder:text-[#193140] placeholder:italic pl-[5px] rounded-[3px] p-[2px] outline-none"
+          />
+          <a
+            href="#"
+            class="text-[#e4e4e4] w-max float-right ml-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 text-[#2a3e5a]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="left-menu float-left z-[1] sticky top-9 left-[calc(((100%-1200px)/2)-180px)] bg-pink-300 h-[360px] w-[180px]"
+    >
+    </div>
     <div class="banner2 bg-purple-500 h-[240px] relative"></div>
     <div class="banner3 bg-[#40e0d0] h-[1200px]"></div>
 
     <div
       class="bg-blue-500 text-white/80 py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300
-      hover:cursor-pointer inline-flex items-center group" >
+      hover:cursor-pointer inline-flex items-center group"
+    >
       <!-- inline-block  -->
       <!-- duration para el tiempo de transition-colors -->
       <svg
@@ -88,7 +182,6 @@ const { title } = Astro.props;
 
       Presioname
       <svg
-
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -107,7 +200,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style>
-  
   /* .container {
     max-width: 1200px;
     margin: 0 10%;
@@ -123,14 +215,14 @@ const { title } = Astro.props;
     text-transform: uppercase;       (El texto en mayuscula)
     color: #f8eeee;
   }*/
-  
-/*
+
+  /*
   .flex-menu li {
     margin-left: 10px;
     display: inline-block;
     color: #f1ecec;
   }*/
-/*
+  /*
   .flex-menu a {
     text-decoration: none;
     color: #e6d7d7;
@@ -141,7 +233,7 @@ const { title } = Astro.props;
     color: #1a93eb;
     text-decoration: underline;
   }*/
-/*
+  /*
   .menu-right {
     float: left;
     width: 40%;
