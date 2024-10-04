@@ -53,24 +53,23 @@ const { title } = Astro.props;
             </svg>
             Instalar Steam
           </a>
-          <a href="#" class="text-xs"> iniciar sesion </a>
+          <a href="#" class="text-xs text-[#b1b1b1]"> iniciar sesion </a>
           |
-          <a href="#" class="text-xs"> idioma </a>
+          <a href="#" class="text-xs text-[#b1b1b1]"> idioma </a>
         </div>
       </div>
     </header>
 
-    <div class="banner"></div>
-    <div class="left-menu"></div>
-    <div class="banner2 container"></div>
-    <div class="banner3"></div>
+    <div class="banner bg-orange-400 h-[450px]"></div>
+    <div class="left-menu float-left z-[1] sticky top-0 left-[calc(((100%-1200px)/2)-180px)] bg-pink-300 h-[360px] w-[180px]"></div>
+    <div class="banner2 bg-purple-500 h-[240px] relative"></div>
+    <div class="banner3 bg-[#40e0d0] h-[1200px]"></div>
 
     <div
       class="bg-blue-500 text-white/80 py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300
       hover:cursor-pointer inline-flex items-center group" >
       <!-- inline-block  -->
       <!-- duration para el tiempo de transition-colors -->
-       
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -168,12 +167,7 @@ const { title } = Astro.props;
     display: inline-flex;
     align-items: center;   Alinear items en el eje y
   }*/
-  
-  
-  .banner {
-    background: orange;
-    height: 478px;
-  }
+  /*
   .banner2 {
     position: relative;
     background: purple;
@@ -184,13 +178,13 @@ const { title } = Astro.props;
     background: pink;
     width: 180px;
     height: 360px;
-    z-index: 1; /* Para visualizar el elemento superpuesto y como se vera con otros */
-    position: sticky; /* Se encarga que en caulquier momento se va a mostrar el elemento cuando bajemos */
-    top: 0; /* Para que se quede arriba del todo */
+    z-index: 1;             (Para visualizar el elemento superpuesto y como se vera con otros )
+    position: sticky;       (Se encarga que en caulquier momento se va a mostrar el elemento cuando bajemos )
+    top: 0;                 (Para que se quede arriba del todo )
     left: calc(((100% - 1200px) / 2) - 180px);
   }
   .banner3 {
-    background: turquoise;
+    background: #40e0d0;
     height: 1200px;
-  }
+  }*/
 </style>
