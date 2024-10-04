@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,148 +8,189 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<!-- <slot /> -->
-		 <header>
-			<div class="container">
-				<div class="flex-menu">
-					<img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="" class="">
-					<menu>
-						<li> <a href="#">Tienda</a></li>
-						<li> <a href="#">Comunidad</a></li>
-						<li> <a href="#">Acerca de</a></li>
-						<li> <a href="#">Soporte</a></li>
-					</menu>
-					
-				</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Pagina Steam</title>
+  </head>
+  <body>
+    <!-- <slot /> -->
+    <header class="bg-[#161d24] h-[104px] px-4">
+      <div class="container w-[940px] h-[104px] mx-10">
 
-				<div class="menu-right">
-					<a href="#" class="btn-download">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-						  </svg>
-						  Instalar Steam
-					</a>
-					<a href="#"> iniciar sesion </a>
-					              |
-					<a href="#"> idioma </a>
-					  
-				</div>
-			</div>
-		 </header>
+        <div class="flex-menu absolute left-[200px] pt-[30px] flex h-[80px] w-[60%] items-center float-left font-sans uppercase text-gray-300">
+          <img
+            src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+            alt=""
+            class="w-[176px] h-[44px]"
+          />
+          <menu>
+            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Tienda</a></li>
+            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Comunidad</a></li>
+            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Acerca de</a></li>
+            <li class="ml-[10px] inline-block"><a href="#" class="font-semibold hover:text-[#1a93eb] hover:underline">Soporte</a></li>
+          </menu>
+        </div>
 
-		 <div class="banner"></div>
-		 <div class="left-menu"></div>
-		 <div class="banner2 container"></div>
-		 <div class="banner3"></div>
-	</body>
+        <div class="menu-right absolute right-[30px] mt-2 float-right w-[30%] font-sans text-[#f1ecec] items-center inline-flex gap-1 ">
+          <a href="#" class="btn-download bg-[#789806] gap-[7px] inline-flex items-center pl-[3px] pr-[5px] py-1 mr-[10px] text-xs hover:bg-[#a2cc09d8]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              ></path>
+            </svg>
+            Instalar Steam
+          </a>
+          <a href="#" class="text-xs"> iniciar sesion </a>
+          |
+          <a href="#" class="text-xs"> idioma </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner"></div>
+    <div class="left-menu"></div>
+    <div class="banner2 container"></div>
+    <div class="banner3"></div>
+
+    <div
+      class="bg-blue-500 text-white/80 py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300
+      hover:cursor-pointer inline-flex items-center group" >
+      <!-- inline-block  -->
+      <!-- duration para el tiempo de transition-colors -->
+       
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-4 mr-1 mt-[2px] group-hover:animate-spin"
+      >
+        <!-- animated-spin para animaciones, el div donde esta debe tener la propiedad group -->
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+        ></path>
+      </svg>
+
+      Presioname
+      <svg
+
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-5 mt-[2px] ml-1"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+      </svg>
+    </div>
+    <!-- heroicons para los iconos -->
+    <!-- bootstrap para los ejemplos -->
+  </body>
 </html>
 <style>
-	html, body {
-		padding: 0;
-		margin: 0;
-	}
-	header{
-		background: #161d24;
-		height: 80px;
-	}
-	.container{
-		max-width: 1200px;
-		margin: 0 10%;
-		
-	}
-	.flex-menu{
-		display: flex;
-		height: 80px;
-		width: 60%;
-		align-items: center;
-		float: left;         /*Permite que un elemento de bloque tenga algo a su lado*/
-        font-family: sans-serif;
-		text-transform: uppercase;   /*El texto en mayuscula*/ 
-		color: #f8eeee;
-	}
-	.flex-menu img{
-		width: 160px;
-	}
+  
+  /* .container {
+    max-width: 1200px;
+    margin: 0 10%;
+  } */
+  /*
+  .flex-menu {
+    display: flex;
+    height: 80px;
+    width: 60%;
+    align-items: center;
+    float: left;               (Permite que un elemento de bloque tenga algo a su lado)
+    font-family: sans-serif;
+    text-transform: uppercase;       (El texto en mayuscula)
+    color: #f8eeee;
+  }*/
+  
+/*
+  .flex-menu li {
+    margin-left: 10px;
+    display: inline-block;
+    color: #f1ecec;
+  }*/
+/*
+  .flex-menu a {
+    text-decoration: none;
+    color: #e6d7d7;
+    font-weight: 600;   (Le da espesor a la letra)
+  }
 
-	.flex-menu li {
-		margin-left: 10px;
-		display: inline-block;
-		color: #f1ecec;
-	}
-
-	.flex-menu a {
-		text-decoration: none;
-		color: #e6d7d7;
-		font-weight: 600;   /*Le da espesor a la letra*/ 
-	}
-
-	.flex-menu a:hover {
-		color: #1a93eb;
-		text-decoration: underline;
-	}
-	
-	.menu-right{
-		float: left;  /* Lo utiliza para acomodar el imiciar sesion a la derecha por espacio */
-		width: 40%;
-		margin-top: 8px;
-		font-family: sans-serif;
-		color: #f1ecec;
-	}
-	.menu-right a {
-		text-decoration: none;
-		color: #f1ecec;
-		font-size: 11.5px;
-
-	}
-	.btn-download{
-		text-decoration: none;
-		background: #789806;
-		padding: 5px 10px;
-		margin-top: 10px ;
-		margin-right: 10px;
-		gap: 7px;
-		display: inline-flex;
-		align-items: center;   /*Alinear items en el eje y */
-	}
-	.btn-download svg{
-		width: 15px;
-	}
-	.btn-download:hover{
-		background-color:  #a2cc09d8;
-	}
-	.banner{
-		background: orange;
-		height: 478px;
-	}
-	.banner2{
-		position: relative;
-		background: purple;
-		height: 240px;
-		
-	}
-	.left-menu{
-		float: left;
-		background: pink;
-		width: 180px;
-		height: 360px;
-		z-index: 1;    /* Pra vizeualiza el elemento superpuesto y como se vera con otros */
-		position: sticky;   /* Se encarga que en caulquier momento se va a mostrar el elemento cuando bajemos */
-	    top: 0;        /* Para que se quede arriba del todo */
-		left: calc(((100% - 1200px) / 2) - 180px) ;
-	}
-	.banner3{
-		background: turquoise;
-		height: 120px;
-	}
-
-
+  .flex-menu a:hover {
+    color: #1a93eb;
+    text-decoration: underline;
+  }*/
+/*
+  .menu-right {
+    float: left;
+    width: 40%;
+    margin-top: 5px;
+    font-family: sans-serif;
+    color: #f1ecec;
+    align-items: center;
+    display: inline-flex;
+    gap: 4px;
+  }*/
+  /*
+  .menu-right a {
+    text-decoration: none;
+    color: #f1ecec;
+    font-size: 11.5px;
+  }
+  .btn-download {
+    text-decoration: none;
+    background: #789806;
+    padding: 1px 5px;
+    margin-right: 10px;
+    gap: 7px;
+    display: inline-flex;
+    align-items: center;   Alinear items en el eje y
+  }*/
+  
+  
+  .banner {
+    background: orange;
+    height: 478px;
+  }
+  .banner2 {
+    position: relative;
+    background: purple;
+    height: 240px;
+  }
+  .left-menu {
+    float: left;
+    background: pink;
+    width: 180px;
+    height: 360px;
+    z-index: 1; /* Para visualizar el elemento superpuesto y como se vera con otros */
+    position: sticky; /* Se encarga que en caulquier momento se va a mostrar el elemento cuando bajemos */
+    top: 0; /* Para que se quede arriba del todo */
+    left: calc(((100% - 1200px) / 2) - 180px);
+  }
+  .banner3 {
+    background: turquoise;
+    height: 1200px;
+  }
 </style>
